@@ -8,9 +8,16 @@
 
 - **Exemplo:** Quando uma rota como `/users` é acessada, o controller correspondente recebe a requisição, lida com parâmetros e body (se necessário) e, então, chama os serviços relacionados.
 
----
 
 **2. Service Layer (Business Logic):**
 - **Função:** Contém a lógica de negócios da aplicação. É aqui que estão as regras e processamentos principais que não estão diretamente ligados ao gerenciamento de dados ou ao tráfego de requisições. A Service Layer faz a ponte entre os Controllers e o Data Access Layer.
 
 - **Exemplo:** Ao receber a requisição de um controller, o service executa as regras de negócio, como validação de dados, cálculos ou transformações, antes de chamar a camada de acesso a dados para obter ou salvar informações.
+
+**3. Data Access Layer (ODM):**
+
+- **Função:** Esta camada é responsável pela interação direta com o banco de dados. Em uma aplicação NestJS, essa camada geralmente faz uso de Object-Document Mapping (ODM) ou Object-Relational Mapping (ORM) para comunicar-se com o banco de dados, seja ele NoSQL ou SQL.
+
+- **Exemplo:** Se um serviço precisa acessar um usuário do banco de dados, ele chama o repositório responsável por essa entidade na Data Access Layer, que se comunica com o banco de dados para buscar, salvar ou atualizar os dados.
+
+---
