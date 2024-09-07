@@ -1,7 +1,10 @@
 <h2>Layer Architecture (arquitetura em camadas):</h2>
 
-![image](https://github.com/user-attachments/assets/69754e3f-9c01-4833-bbe9-7174190eba7e)
+<div align="center">
 
+<img src="https://github.com/user-attachments/assets/69754e3f-9c01-4833-bbe9-7174190eba7e">
+
+</div>
 
 **1. Controllers (Routes)**:
 - **Função:** São responsáveis por lidar com as requisições HTTP que chegam. Um controller interpreta a requisição, identifica qual rota foi chamada e direciona a lógica para o serviço adequado.
@@ -26,6 +29,6 @@
 
 - **Services** acessam a Data Access Layer para manipular os dados no banco de dados.
 
-A **Data Access Layer** executa as operações diretamente no banco de dados e retorna os dados para a Service Layer, que, por sua vez, os envia de volta ao Controller, fechando o ciclo.
+- A **Data Access Layer** executa as operações diretamente no banco de dados e retorna os dados para a Service Layer, que, por sua vez, os envia de volta ao Controller, fechando o ciclo.
 
 ---
