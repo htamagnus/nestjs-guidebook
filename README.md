@@ -20,4 +20,12 @@
 
 - **Exemplo:** Se um serviço precisa acessar um usuário do banco de dados, ele chama o repositório responsável por essa entidade na Data Access Layer, que se comunica com o banco de dados para buscar, salvar ou atualizar os dados.
 
+## Como as camadas se conectam:
+
+- **Controllers** chamam os Services para lidar com as requisições e lógica de negócios.
+
+- **Services** acessam a Data Access Layer para manipular os dados no banco de dados.
+
+A **Data Access Layer** executa as operações diretamente no banco de dados e retorna os dados para a Service Layer, que, por sua vez, os envia de volta ao Controller, fechando o ciclo.
+
 ---
